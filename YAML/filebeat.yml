@@ -1,0 +1,29 @@
+  GNU nano 4.8                             filebeat.yml                                        ---
+- name: Installing and Launching Filebeat
+  hosts: webservers
+  become: yes
+  tasks:
+
+  - name: Download filebeat deb
+    command: curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.1-a>
+  - name: Install Filebeat deb
+    command: dpkg -i filebeat-7.6.1-amd64.deb
+
+  - name: Drop In filebeat.yml
+    copy:
+      src: /etc/ansible/files/filebeat-config.yml
+      dest: /etc/filebeat/filebeat.yml
+
+  - name: Enable and Configure System Module
+    command: filebeat modules enable system
+
+  - name: Setup Filebeat
+    command: filebeat setup
+
+  - name: Start Filebeat Service
+    command: service filebeat start
+
+  - name: Enable Service Filebeat on Boot
+    systemd:
+       name: filebeat
+       enabled: yes
