@@ -26,7 +26,7 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 Load balancing ensures that the application will be highly avaliable, in addition to restricting access to the network.
 - Load balancers protect the avaliablitly of applications. Should one server go down or recieve too many requests the load balancer redirects traffic to other servers with the exact same data. 
 - Using a jumpbox has many advantages to it. Some of the main advantages are security, automation, and access control. A jumpbox allows the main machines to not be directly accessible, requiring first to connect to the jumpbox before making a connection to the machines. This makes it harder for attackers because there is only one heavily gaurded entry point. This also allows you to control who can and can not connect to the machines. Another adavantage is that it allows you to automate the other machines. Instead of updating and install applications on each machine individualy you can use software such as ansible to install the same thing on multiple machines very easily.  
- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_.
+
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the data and system logs.
 - _TODO: What does Filebeat watch for?_
