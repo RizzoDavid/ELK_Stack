@@ -10,6 +10,15 @@ These files have been tested and used to generate a live ELK deployment on Azure
   - [Install FileBeat](/YAML/filebeat.yml)
   - [Install MetricBeat](/YAML/metricbeat.yml)
 
+Download the _ansible.cfg_ from https://ansible.com and edit to your config or copy [Ansible Configuration](/Ansible/ansible.cfg) to /etc/ansible
+  - For ansible.cfg edit:
+    '''bash
+    cd /etc/ansible
+    nano ansible.cfg
+    CTRL+W enter remote_user
+    change 'remote_user = admin'
+    '''
+
 This document contains the following details:
 - Description of the Topology
 - Access Policies
