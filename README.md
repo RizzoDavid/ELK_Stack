@@ -70,10 +70,15 @@ The configuration details of each machine may be found below.
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the jumpbox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+- ```bash
+  MyPublicIP:5601
+  ```
 
 Machines within the network can only be accessed by anisble.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+- ```bash
+  JumpBox | 10.0.0.5:22
+  My PC   | MyPublicIP:5601
+  ```
 
 A summary of the access policies in place can be found in the table below.
 
