@@ -127,11 +127,14 @@ This ELK server is configured to monitor the following machines:
 - **Web1**: 10.0.0.6
 - **Web2**: 10.0.0.7
 - **Web3**: 10.0.0.10
+
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+- FileBeat
+- MetricBeat
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- _FileBeat_ is used to log events
+- _MetricBeat_ is used to get metrics and system statistics 
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
