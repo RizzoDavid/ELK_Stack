@@ -79,9 +79,12 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes                 | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Jump Box | Yes                 | MyPublicIP           |
+| Web 1    | no                  | 10.0.0.5                     |
+| Web 2    | no                  | 10.0.0.5                     |
+| Web 3    | no                  | 10.0.0.5                     |
+| Elk      |          YES           |       MYPUBLICIP:5601               |
+| LoadBalancer    |    YES                 |   MYPUBLICIP                   |
 
 ### Elk Configuration
 
