@@ -56,14 +56,14 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 The configuration details of each machine may be found below.
 
 
-| Name     | Function | IP Address (Private:Public) | Operating System |
+| Name     | Function | IP Address (Private | Public) | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.5:104.211.18.77   | Linux            |
+| Jump Box | Gateway  | 10.0.0.5 | 104.211.18.77   | Linux            |
 | Web 1    | DWVA     | 10.0.0.6   | Linux            |
 | Web 2    | DVWA     | 10.0.0.7   | Linux            |
 | Web 3    | DVWA     | 10.0.0.10  | Linux            |
-| Elk      | Elk Stack| 10.1.0.5:52.159.72.249   | Linux            |
-| LoadBalancer      | Balance Work Load| na:20.120.87.97   | Linux            |
+| Elk      | Elk Stack| 10.1.0.5 | 52.159.72.249   | Linux            |
+| LoadBalancer      | Balance Work Load| | 20.120.87.97   | Linux            |
 
 ### Access Policies
 
