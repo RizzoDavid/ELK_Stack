@@ -6,9 +6,14 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the yaml file may be used to install only certain pieces of it, such as Filebeat.
 
+  - [Ansible Config](/Ansible/ansible.cfg)
+  - [Ansible Hosts](/Ansible/hosts)
   - [Install Docker](/YAML/install-docker.yml)
+  - [Install Elk](/YAML/install-elk.yml)
   - [Install FileBeat](/YAML/filebeat.yml)
+  - [FileBeat Config](/YAML/filebat-config.yml)
   - [Install MetricBeat](/YAML/metricbeat.yml)
+  - [MetricBeat Config](/YAML/metricbeat-config.yml)
 
 Download the _ansible.cfg_ from https://ansible.com and edit to your config or copy [Ansible Configuration](/Ansible/ansible.cfg) to /etc/ansible
   - For ansible.cfg edit:
@@ -148,5 +153,3 @@ _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
 - _Which URL do you navigate to in order to check that the ELK server is running?
-
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
