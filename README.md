@@ -75,7 +75,8 @@ Only the jumpbox machine can accept connections from the Internet. Access to thi
   ```
 
 Machines within the network can only be accessed by anisble.
-- ```bash
+- Elk is accessible by
+  ```bash
   JumpBox | 10.0.0.5:22
   My PC   | MyPublicIP:5601
   ```
@@ -88,8 +89,8 @@ A summary of the access policies in place can be found in the table below.
 | Web 1    | no                  | 10.0.0.5                     |
 | Web 2    | no                  | 10.0.0.5                     |
 | Web 3    | no                  | 10.0.0.5                     |
-| Elk      |          YES           |       MYPUBLICIP:5601               |
-| LoadBalancer    |    YES                 |   MYPUBLICIP                   |
+| Elk      |          YES           |       MyPublicIP:5601               |
+| LoadBalancer    |    YES                 |   MyPublicIP                   |
 
 ### Elk Configuration
 
