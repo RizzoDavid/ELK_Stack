@@ -24,6 +24,12 @@ Assign username and SSH Public Key for Web1, Web2, Web3, and Elk in Azure Portal
     username: admin
     SSH Key: copy id_rsa.pub from ansible docker container in ~/.ssh/id_rsa.pub
     ```
+  - Generate SSH Key
+    ```bash
+    cd ~/.ssh
+    ssh-keygen (Press Enter for all)
+    cat id_rsa.pub
+    ```
 
 This document contains the following details:
 - Description of the Topology
