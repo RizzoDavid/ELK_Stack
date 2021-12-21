@@ -89,9 +89,26 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 - _TODO: What is the main advantage of automating configuration with Ansible?_
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- Increase System Memory
+  ```yaml
+  - name: Set vm.max_map_count to 262144
+    systemctl:
+      name: vm.max_map_count
+      value: '262144'
+      state: present
+      reload: yes
+  ```
+- Install Services
+  ```bash
+      `docker.io`
+      `python3-pip`
+      `docker` through pip
+- Launch container with exposed ports
+  ```bash
+  `5601:5601`
+  `9200:9200`
+  `5044:5044`
+  ```
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
