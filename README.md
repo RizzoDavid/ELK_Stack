@@ -15,8 +15,14 @@ Download the _ansible.cfg_ from https://ansible.com and edit to your config or c
     ```bash
     cd /etc/ansible
     nano ansible.cfg
-    CTRL+W enter remote_user
     change 'remote_user = admin'
+    ```
+
+Assign username and SSH Public Key for Web1, Web2, Web3, and Elk in Azure Portal. 
+  - Web1, Web2, Web3, and Elk | Reset Password | Reset SSH Public Key
+    ```bash
+    username: admin
+    SSH Key: copy id_rsa.pub from ansible docker container in ~/.ssh/id_rsa.pub
     ```
 
 This document contains the following details:
