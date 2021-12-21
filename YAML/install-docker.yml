@@ -1,37 +1,40 @@
 ---
-- hosts: elk
+- name: InstallDVWA
+  hosts: webservers
   become: true
   tasks:
-       - name: Set vm.max_map_count to 262144
-         ansible.posix.sysctl:
-            name: vm.max_map_count
-            value: 262144
-            state: present
-            reload: yes
-       - name: docker.io
-         apt:
-            update_cache: yes
-            name: docker.io
-            state: present
-       - name: Install pip3
-         apt:
-            name: python3-pip
-            state: present
-       - name: Install Docker
-         pip:
-            name: docker
-            state: present
-       - name: Install Elk docker container
-         docker_container:
-            name: elk
-            image: sebp/elk:761
-            published_ports:
-             - 5601:5601
-             - 9200:9200
-             - 5044:5044
-            restart_policy: unless-stopped
-            state: started
-       - name: Start Docker
-         systemd:
-            enabled: yes
-            name: docker
+
+  - name: Uninstall apache httpd
+    apt:
+       name: apache2
+       state: absent
+
+  - name: docker.io
+    apt:
+       update_cache: yes
+       name: docker.io
+       state: present
+
+  - name: Install pip3
+    apt:
+       name: python3-pip
+       state: present
+
+  - name: Install docker
+    pip:
+       name: docker
+       state: present
+
+  - name: Install DVWA docker container
+    docker_container:
+       name: dvwa
+       image: cyberxsecurity/dvwa
+       published_ports: 80:80
+       restart_policy: unless-stopped
+       state: started
+
+
+  - name: Start Docker
+    systemd:
+       enabled: yes
+       name: docker
